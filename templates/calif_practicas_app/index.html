@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!-- IMPORTANT: Any document type declaration (e.g. <!DOCTYPE html>) must appear in the first line -->
+
+<!-- Inform Django’s template system that we will be using static media -->
+{% load staticfiles %}
+
+<html>
+
+    <head>
+        <title>Calificador de prácticas de empresa de la ETSIIT UGR</title>
+
+        <!-- Including CSS and JavaScript into the template -->
+        <!--<link rel="stylesheet" href="{% static "css/base.css" %}" />-->
+        <!--<script src="{% static "js/jquery.js" %}"></script>-->
+    </head>
+
+    <body>
+        <img src="{% static "logo.jpeg" %}" alt="Logo de la ETSIIT" />
+
+        <h1>Calificador de prácticas de empresa de la ETSIIT UGR</h1>
+
+        <button type="submit">Crear una empresa</button>
+        <button type="button">Listar calificaciones para cada empresa</button>
+        <button type="button">Añadir nueva calificación</button>
+        <button type="button">Borrar una calificación</button>
+        <button type="button">Ránking de empresas por calificación</button>
+
+        <div>
+          <!--<a href="/about">About Rango</a><br />-->
+          <!-- Including Static Media -->
+          <!--<img src="{% static "rango1.jpg" %}" alt="Picture of Rango" />-->
+        </div>
+    </body>
+
+</html>
