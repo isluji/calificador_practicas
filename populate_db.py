@@ -1,15 +1,15 @@
+"Script para rellenar la base de datos con datos de prueba"
 
-# IMPORT PROJECT'S SETTINGS
-
-# If you don't perform this crucial step, you'll get an exception when attempting to
+# If you don't import the project's settings, you'll get an exception when attempting to
 # import your models. This is because the necessary Django infrastructure has not yet
 # been initialised. This is why we import the models AFTER the settings have been loaded.
-
 import os
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'calificador_practicas.settings')
 
 import django
 django.setup()
+
+# -------------------------------------------------------------
 
 from calif_practicas_app.models import Empresa, Calificacion
 

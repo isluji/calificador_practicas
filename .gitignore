@@ -92,3 +92,9 @@ ENV/
 *.db
 *.sqlite3
 */migrations/
+
+# Documentation
+*/doc/
+
+# Personal aux file
+dudas.txt

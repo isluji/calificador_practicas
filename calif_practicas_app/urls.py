@@ -1,3 +1,5 @@
+"Mapeo de URLs con vistas"
+
 from django.conf.urls import url
 
 from calif_practicas_app import views
