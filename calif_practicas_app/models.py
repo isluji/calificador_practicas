@@ -4,6 +4,8 @@ from __future__ import unicode_literals
 
 from django.db import models
 
+import uuid
+
 # To make readable URLs, we need to include a slug field in the Enterprise model. First we need to
 # import the function slugify from Django that will replace whitespace with hyphens (for example,
 # "how do i create a slug in django" turns into "how-do-i-create-a-slug-in-django").
@@ -23,7 +25,7 @@ class Empresa(models.Model):
     """
 
     nombre = models.CharField(max_length=50, unique=True)
-    slug = models.SlugField(unique=True)
+    slug = models.SlugField(unique=True, default=uuid.uuid1)
 
     def save(self, *args, **kwargs):
         self.slug = slugify(self.nombre)

@@ -36,6 +36,7 @@ STATIC_PATH = os.path.join(PROJECT_PATH,'static')
 
 # Path to databases
 DATABASE_PATH = os.path.join(PROJECT_PATH, 'calif_practicas_app.db')
+TEST_DATABASE_PATH = os.path.join(PROJECT_PATH, 'test.db')
 
 ############################################################
 
@@ -61,8 +62,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'calif_practicas_app',    ##### TANGO 1.9 => DJANGO BASICS #####
+    'django_nose',
+    'calif_practicas_app',
 ]
+
+TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -108,6 +112,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': DATABASE_PATH,
+        # 'TEST': {
+        #     'NAME': TEST_DATABASE_PATH,
+        # },
+
         # For SQLite databases, the remaining keys of USER, PASSWORD, HOST and PORT
         # are not required and can thus be safely removed.
     }
